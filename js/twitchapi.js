@@ -6,7 +6,7 @@ var authenURL = 'https://api.twitch.tv/kraken/oauth2/authorize?' +
 				'&redirect_uri=' + homeLink +
 				'&scope=' + 'user_read';
 var accToken = 'Nope';				
-if(accToken = 'Nope'){
+if(accToken === 'Nope'){
 	window.open(authenURL,'_self');
 	accToken = document.location.hash;
 }
