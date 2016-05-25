@@ -5,9 +5,16 @@ var authenURL = 'https://api.twitch.tv/kraken/oauth2/authorize?' +
 				'response_type=token&client_id=' + id +
 				'&redirect_uri=' + homeLink +
 				'&scope=' + 'user_read';
-window.open(authenURL,'_self');
+var accToken = 'Nope';				
+if(accToken = 'Nope'){
+	window.open(authenURL,'_self');
+	accToken = document.location.hash;
+}
 
-$.getJSON('https://api.twitch.tv/kraken/users/shulyx?callback=?', function(data) {
+dataURL = 'https://api.twitch.tv/kraken/users/shulyx' + '?oauth_token=' + accToken + '&callback=?';
+
+
+$.getJSON(dataURL, function(data) {
   console.log(data);
 
 });
