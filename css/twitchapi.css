@@ -1,0 +1,19 @@
+#quote-button-title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#quote-machine {
+	max-width: 400px;
+}
+#quote-block {
+	margin: 0 5px;
+}
+#quote {
+	font-style: italic;
+	font-weight: 600;
+	text-align: center;
+}
+#author {
+	text-align: right;
+}
