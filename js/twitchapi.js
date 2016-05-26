@@ -7,14 +7,7 @@ var authenURL = 'https://api.twitch.tv/kraken/oauth2/authorize?' +
 				'&scope=' + 'user_read';
 var accToken = 'Nope';				
 if(accToken === 'Nope'){
-	window.open(authenURL,'_this');
+	window.open(authenURL,'_blank');
 	accToken = document.location.hash;
 }
 
-dataURL = 'https://api.twitch.tv/kraken/users/shulyx' + '?oauth_token=' + accToken + '&callback=?';
-
-
-$.getJSON(dataURL, function(data) {
-  console.log(data);
-
-});
