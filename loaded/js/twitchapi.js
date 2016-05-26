@@ -16,7 +16,7 @@ accToken = accTokenArr[1];
 
 
 
-dataURL = 'https://api.twitch.tv/kraken/channels/shulyx/follows' + '?oauth_token=' + accToken + '&callback=?';
+dataURL = 'https://api.twitch.tv/kraken/users/shulyx/follows/channels' + '?oauth_token=' + accToken + '&callback=?';
 console.log(dataURL);
 
 
