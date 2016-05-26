@@ -1,19 +1,36 @@
-#quote-button-title {
-	margin-top: 0;
-	margin-bottom: 0;
+#list-streamers ul a li {
+	font-family: 'Josefin Slab', serif;
+	font-size: 1.2em;
+	display: block;
+	border-bottom: solid white;
+	text-decoration: none;
+
 }
 
-#quote-machine {
-	max-width: 400px;
+a {
+	text-decoration: none;
 }
-#quote-block {
-	margin: 0 5px;
+a:hover {
+	text-decoration: none;
 }
-#quote {
-	font-style: italic;
-	font-weight: 600;
-	text-align: center;
+
+.online {
+	background-color: #BDD8C2;
 }
-#author {
-	text-align: right;
+
+.offline {
+	background-color: #C5C5C5;
+}
+
+
+.disable {
+	  display: none !important;
+}
+
+.active {
+		background-color: #BDD8C2;
+}
+
+.inactive{
+		background-color: #C5C5C5;
 }
