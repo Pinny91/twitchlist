@@ -29,17 +29,38 @@ $.getJSON(dataURL, function(followersListData) {
 	for(i=0; i<followersListData.follows.length; i++) {
 		channelName = followersListData.follows[i].channel.name;
 		channelURL = channelBasicURL + channelName;
-		$.getJSON(channelURL, function(channelData) {
+		$.getJSON(channelURL, function(streamData) {
 			teller++;
-			if(channelData.stream === null) {
-				var randomArr = channelData._links.self.split('/');
+			if(streamData.stream === null) {
+				var randomArr = streamData._links.self.split('/');
 				var channelname = randomArr[randomArr.length-1];
-				$('#list-streamers ul').append('<a target="_blank" href="' + 'https://www.twitch.tv/' + channelname + '"><li id="num' + teller +'" class="btn btn-default">'+ channelname +'		Offline' + '</li></a>');	
+				var logoURL = 'img/off.png';
+				var game = 'offline';
+				var channelURL = 'https://www.twitch.tv/' + channelname
+				$('#list-streamers ul').append(
+					'<a target="_blank" href="' + channelURL + '">' +
+					'<li id="num' + teller +'"class="btn btn-default">'+ 
+					'<div class="logo-block"><img class="logo img-rounded" src="' + logoURL + '"></div>' +					
+					'<div class="name-block"><p>'+ channelname + '</p></div>' +
+					'<div class="game-block"><p>' + game + '</p></div>' +
+					'</li></a>'
+				);	
 				var listId = '#num' + teller;
 				$(listId).addClass('offline');
 			}
 			else {
-				$('#list-streamers ul').append('<a target="_blank" href="' + channelData.stream.channel.url + '"><li id="num' + teller +'"class="btn btn-default">'+ channelData.stream.channel.name +'		'+ channelData.stream.game +'</li></a>');
+				var logoURL = streamData.stream.channel.logo;
+				var channelname = streamData.stream.channel.name;
+				var game = streamData.stream.game;
+				var channelURL = streamData.stream.channel.url;
+				$('#list-streamers ul').append(
+					'<a target="_blank" href="' + channelURL + '">' +
+					'<li id="num' + teller +'"class="btn btn-default">'+ 
+					'<div class="logo-block"><img class="logo img-rounded" src="' + logoURL + '"></div>' +					
+					'<div class="name-block">'+ channelname + '</div>' +
+					'<div class="game-block">' + game + '</div>' +
+					'</li></a>'
+				);
 				var listId = '#num' + teller;
 				$(listId).addClass('online');
 			

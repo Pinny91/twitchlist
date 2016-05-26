@@ -1,10 +1,13 @@
+#page {
+	max-width: 450px;
+}
 #list-streamers ul a li {
 	font-family: 'Josefin Slab', serif;
 	font-size: 1.2em;
 	display: block;
 	border-bottom: solid white;
 	text-decoration: none;
-
+	height: 55px;
 }
 
 a {
@@ -31,6 +34,52 @@ a:hover {
 		background-color: #BDD8C2;
 }
 
-.inactive{
+.inactive {
 		background-color: #C5C5C5;
 }
+/*Logo opmaak*/
+.logo {
+	width: 40px;
+    height: 40px;
+}
+#list-streamers ul a .online .logo-block .logo {
+    border: 3px solid #73AD21;
+}
+#list-streamers ul a .offline .logo-block .logo {
+    border: 3px solid #8E9092;
+}
+
+
+/* TABBEL OPMAAK */
+
+/*logo*/
+.logo-block {
+	width: 60px;
+	height: 40px;
+    float:left;
+	top:10px;
+}
+
+/*naam*/
+.name-block {
+	float:left;
+	margin-top: 7px;
+}
+
+/*Game*/
+.game-block {
+	float: right;
+	margin-top: 7px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
