@@ -17,7 +17,7 @@ var accTokenArr = accToken.split("=");
 accToken = accTokenArr[1];
 
 //Creating URL to get the follorwersList
-dataURL = 'https://api.twitch.tv/kraken/users/shulyx/follows/channels' + '?oauth_token=' + accToken + '&callback=?';
+dataURL = 'https://api.twitch.tv/kraken/users/shulyx/follows/channels' + '?oauth_token=' + accToken + '&limit=100&callback=?';
 console.log(dataURL);
 
 
@@ -29,7 +29,7 @@ $.getJSON(dataURL, function(followersListData) {
 		channelName = followersListData.follows[i].channel.name;
 		channelURL = channelBasicURL + channelName;
 		$.getJSON(channelURL, function(channelData) {
-			if(channelData.stream === null) $('#list-streamers ul').append('<li>'+ channelName +'		Offline'+   +'</li>');	
+			if(channelData.stream === null) $('#list-streamers ul').append('<li>'+ channelData.stream.channel.name +'		Offline' + '</li>');	
 			else {
 				$('#list-streamers ul').append('<li>'+ channelData.stream.channel.name +'		'+ channelData.stream.game +'</li>');
 			}
