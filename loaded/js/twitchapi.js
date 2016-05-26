@@ -9,6 +9,12 @@ var accToken = 'Nope';
 if(accToken === 'Nope'){
 	accToken = document.location.hash;
 }
+var accTokenArr = accToken.split("&");
+accToken = accTokenArr[0];
+var accTokenArr = accToken.split("=");
+accToken = accTokenArr[1];
+
+
 
 dataURL = 'https://api.twitch.tv/kraken/users/shulyx' + '?oauth_token=' + accToken + '&callback=?';
 console.log(dataURL);
