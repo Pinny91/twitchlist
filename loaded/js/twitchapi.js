@@ -29,7 +29,11 @@ $.getJSON(dataURL, function(followersListData) {
 		channelName = followersListData.follows[i].channel.name;
 		channelURL = channelBasicURL + channelName;
 		$.getJSON(channelURL, function(channelData) {
-			if(channelData.stream === null) $('#list-streamers ul').append('<li>'+ followersListData.follows[i].channel.name +'		Offline' + '</li>');	
+			if(channelData.stream === null) {
+				var randomArr = channel._links.self.split('/');
+				var channelname = randomArr[randomArr.length-1];
+				$('#list-streamers ul').append('<li>'+ channelname +'		Offline' + '</li>');	
+			}
 			else {
 				$('#list-streamers ul').append('<li>'+ channelData.stream.channel.name +'		'+ channelData.stream.game +'</li>');
 			}
