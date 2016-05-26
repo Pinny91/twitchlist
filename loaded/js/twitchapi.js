@@ -11,6 +11,7 @@ if(accToken === 'Nope'){
 }
 
 dataURL = 'https://api.twitch.tv/kraken/users/shulyx' + '?oauth_token=' + accToken + '&callback=?';
+console.log(dataURL);
 
 
 $.getJSON(dataURL, function(data) {
