@@ -31,7 +31,7 @@ $.getJSON(dataURL, function(followersListData) {
 		$.getJSON(channelURL, function(channelData) {
 			if(channelData.stream === null) $('#list-streamers ul').append('<li>'+ channelName +'		Offline'+   +'</li>');	
 			else {
-				$('#list-streamers ul').append('<li>'+ channelName +'		'+ channelData.stream.game +'</li>');
+				$('#list-streamers ul').append('<li>'+ channelData.stream.channel.name +'		'+ channelData.stream.game +'</li>');
 			}
 		});
 		
