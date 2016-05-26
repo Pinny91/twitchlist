@@ -24,11 +24,12 @@ console.log(dataURL);
 $.getJSON(dataURL, function(followersListData) {
 	console.log(followersListData);
 	var channelBasicURL = 'https://api.twitch.tv/kraken/streams/';
+	var channelName = "Nope";
 	for(i=0; i<followersListData.follows.length; i++) {
-		var channelName = followersListData.follows[i].channel.name;
+		channelName = followersListData.follows[i].channel.name;
 		channelURL = channelBasicURL + channelName;
 		$.getJSON(channelURL, function(channelData) {
-			if(channelData.stream === null) $('#listStreams').append('<li>'+ channelName +'		Offline'+   +'</li>');	
+			if(channelData.stream === null) $('#list-streamers ul').append('<li>'+ channelName +'		Offline'+   +'</li>');	
 			else {
 				$('#list-streamers ul').append('<li>'+ channelName +'		'+ channelData.stream.game +'</li>');
 			}
