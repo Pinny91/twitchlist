@@ -30,7 +30,7 @@ $.getJSON(dataURL, function(followersListData) {
 		channelURL = channelBasicURL + channelName;
 		$.getJSON(channelURL, function(channelData) {
 			if(channelData.stream === null) {
-				var randomArr = channel._links.self.split('/');
+				var randomArr = channelData._links.self.split('/');
 				var channelname = randomArr[randomArr.length-1];
 				$('#list-streamers ul').append('<li>'+ channelname +'		Offline' + '</li>');	
 			}
