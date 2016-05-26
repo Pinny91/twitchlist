@@ -32,7 +32,7 @@ $.getJSON(dataURL, function(followersListData) {
 			else {
 				$('#list-streamers ul').append('<li>'+ channelName +'		'+ channelData.stream.game +'</li>');
 			}
-		}
+		});
 		
 	}
   
