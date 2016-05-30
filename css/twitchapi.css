@@ -98,23 +98,28 @@ body {
 
 /*logo*/
 .logo-block {
+	display: inline-block;
+    position: relative;
 	width: 10%;
 	height: 40px;
     float:left;
-	top:10px;
 }
 
 /*naam*/
 .name-block {
+	display: inline-block;
+    position: relative;
 	float:left;
 	margin-top: 7px;
 	width: 37%;
 	text-align: left;
-
+	left: 10px;
 }
 
 /*Game*/
 .game-block {
+	display: inline-block;
+    position: relative;
 	float: right;
 	margin-top: 7px;
 	width: 45%;
@@ -124,6 +129,8 @@ body {
 
 /*Viewers*/
 .viewers-block {
+	display: inline-block;
+    position: relative;
 	float: right;
 	margin-top: 7px;
 	width: 7%;
@@ -162,6 +169,52 @@ a:hover {
 	  display: none !important;
 }
 
+
+@media screen and (max-width: 450px) {
+	#list-streamers ul a li {
+		height: 75px;
+	}
+	.name-block {
+		float: left;
+		width: 75%;
+		left: 7%;
+		
+	}	
+	.game-block {
+		float: left;
+		width: 75%;
+		left: 7%;
+	}
+	#head h2{
+		font-size: 1.5em;
+	}
+}
+
+
+/*GSM*/
+@media only screen and (min-resolution: 117dpi) and (max-resolution: 119dpi), only screen and (min-resolution: 131dpi) and (max-resolution: 133dpi), only screen and (min-resolution: 145dpi) and (max-resolution: 154dpi), only screen and (min-resolution: 162dpi) and (max-resolution: 164dpi), only screen and (min-resolution: 169dpi) {
+  /* Your touch-specific css goes here */
+  
+}
+/*TEKST ADJUST CODE*/
+@media all and (min-width: 50px)   {  
+	body  { font-size:0.6em;  } 
+}
+@media all and (min-width: 100px)   {  
+	body  { font-size:0.8em;  } 
+}
+@media all and (min-width: 200px)   {  
+	body  { font-size:1.2em;  } 
+}
+@media all and (min-width: 350px)  {  
+	body  { font-size:1.2em;  }
+}
+@media all and (min-width: 450px)  {  
+	body  { font-size:1.2em;  }
+}
+@media all and (min-width: 700px)  {  
+	body  { font-size:1.2em;  } 
+}
 
 
 
