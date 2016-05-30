@@ -1,19 +1,167 @@
-#quote-button-title {
-	margin-top: 0;
-	margin-bottom: 0;
+ 
+
+body {
+		background-color: #1B1B1B;
+}
+#page {
+	max-width: 550px;
 }
 
-#quote-machine {
-	max-width: 400px;
+
+
+/*Logo opmaak*/
+.logo {
+	width: 40px;
+    height: 40px;
 }
-#quote-block {
-	margin: 0 5px;
+#list-streamers ul a .online .logo-block .logo {
+    border: 3px solid #73AD21;
 }
-#quote {
-	font-style: italic;
-	font-weight: 600;
+#list-streamers ul a .offline .logo-block .logo {
+    border: 3px solid #8E9092;
+}
+/* HEADER OPMAAK */
+#head {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-top: solid #fff;
+	border-bottom: solid #fff;
+	height: 85px;
+}
+
+#head h2{
+	display: inline-block;
+	top: -20px;;
+	color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.225em;
+    line-height: 1.75em;
+	margin: 0 auto 0 auto;
 	text-align: center;
+    text-transform: uppercase;
+	padding: 0.35em 0.5em;
+    position: relative;
+	width: 80%;
 }
-#author {
-	text-align: right;
+
+#head #switch {
+	display: inline-block;
+	color: #fff;
+	width: 19%;
+	padding-top: 5px;
+	position: relative;
+	height: 70px;
 }
+
+#head #switch ul li {
+	cursor: pointer;
+}
+
+/*Knoppen opmaak */
+.sw {
+	width: 18px;
+	overflow: hidden;
+    float: right;
+    clear: right;
+	
+	transition: width 0.3s linear;
+	cursor: pointer;
+	margin: 3px 0;  
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	
+	font-size: 11px;
+	padding-left: 2px;
+	color: #1B1B1B;
+	
+}
+#swAll {
+	background-color: #5163DA;
+}
+#swOn {
+	background-color: #BDD8C2;
+}
+#swOff {
+	background-color: #C5C5C5;
+}
+
+.active {
+		transition: width 0.3s linear;
+		width: 65px !important;
+}
+
+.inactive {
+		background-color: #C5C5C5;
+}
+
+/* TABBEL OPMAAK */
+
+/*logo*/
+.logo-block {
+	width: 10%;
+	height: 40px;
+    float:left;
+	top:10px;
+}
+
+/*naam*/
+.name-block {
+	float:left;
+	margin-top: 7px;
+	width: 37%;
+	text-align: left;
+
+}
+
+/*Game*/
+.game-block {
+	float: right;
+	margin-top: 7px;
+	width: 45%;
+	text-align: left;
+
+}
+
+/*Viewers*/
+.viewers-block {
+	float: right;
+	margin-top: 7px;
+	width: 7%;
+}
+
+
+/* Link opmaak */
+
+#list-streamers ul a li {
+	font-family: 'Josefin Slab', serif;
+	font-size: 1.2em;
+	display: block;
+	border-color: #1B1B1B;
+	text-decoration: none;
+	height: 55px;
+}
+#list-streamers ul a li:hover {
+	border-color: #A0A0A0;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.online {
+	background-color: #BDD8C2;
+}
+.offline {
+	background-color: #C5C5C5;
+}
+
+.disable {
+	  display: none !important;
+}
+
+
+
+
