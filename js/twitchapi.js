@@ -26,7 +26,7 @@ $.getJSON(dataURL, function(followersListData) {
 	var channelBasicURL = 'https://api.twitch.tv/kraken/streams/';
 	var channelName = "Nope";
 	var teller = 0;
-	for(i=0; i<followersListData.follows.length; i++) {
+	for(i=followersListData.follows.length-1; i>=0; i--) {
 		channelName = followersListData.follows[i].channel.name;
 		channelURL = channelBasicURL + channelName;
 		$.getJSON(channelURL, function(streamData) {
