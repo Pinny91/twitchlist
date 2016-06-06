@@ -7,17 +7,8 @@ var authenURL = 'https://api.twitch.tv/kraken/oauth2/authorize?' +
 				'&scope=' + 'user_read';
 var accToken = 'Nope';		
 		
-if(accToken === 'Nope'){
-	accToken = document.location.hash;
-}
-//Filtering Token
-var accTokenArr = accToken.split("&");
-accToken = accTokenArr[0];
-var accTokenArr = accToken.split("=");
-accToken = accTokenArr[1];
-
 //Creating URL to get the follorwersList
-dataURL = 'https://api.twitch.tv/kraken/users/shulyx/follows/channels' + '?oauth_token=' + accToken + '&limit=100&callback=?';
+dataURL = 'https://api.twitch.tv/kraken/users/shulyx/follows/channels' + '?limit=100&callback=?';
 console.log(dataURL);
 
 
