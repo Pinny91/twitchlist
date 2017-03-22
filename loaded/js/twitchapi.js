@@ -57,10 +57,10 @@ $.getJSON(dataURL, function(followersListData) {
 			}
 			else {
 				console.log(streamData);
-				var logoURL = streamData.logo;
-				var channelname = streamData.name;
-				var game = streamData.game;
-				var channelURL = streamData.url;
+				var logoURL = streamData.stream.channel.logo;
+				var channelname = streamData.stream.channel.name;
+				var game = streamData.stream.game;
+				var channelURL = streamData.stream.channel.url;
 				$('#list-streamers ul').append(
 					'<a target="_blank" href="' + channelURL + '">' +
 					'<li id="num' + teller +'"class="btn btn-default">'+ 
