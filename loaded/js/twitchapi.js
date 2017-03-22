@@ -28,11 +28,11 @@ $.getJSON(dataURL, function(followersListData) {
 	var teller = 0;
 	for(i=0; i<followersListData.follows.length; i++) {
 		channelName = followersListData.follows[i].channel.name;
-		channelURL = channelBasicURL + channelName + '?client-ID=' + id;		
+		channelURL = channelBasicURL + channelName;		
 		
 		$.ajax({
 			type: 'GET',
-			url: 'https://api.twitch.tv/kraken/channels/itmejp',
+			url: channelURL,
 			headers: {
 				'Client-ID': 'g1kobimxlknrwgoouk8h1mz4ribnip'
 			},
