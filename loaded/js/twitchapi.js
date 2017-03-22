@@ -28,7 +28,7 @@ $.getJSON(dataURL, function(followersListData) {
 	var teller = 0;
 	for(i=0; i<followersListData.follows.length; i++) {
 		channelName = followersListData.follows[i].channel.name;
-		channelURL = channelBasicURL + channelName;
+		channelURL = channelBasicURL + channelName + '?client-ID=' + id;		
 		$.getJSON(channelURL, function(streamData) {
 			teller++;
 			if(streamData.stream === null) {
