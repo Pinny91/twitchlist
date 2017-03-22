@@ -38,6 +38,7 @@ $.getJSON(dataURL, function(followersListData) {
 			},
 			success: function(streamData) {
 			teller++;
+			console.log(streamData);
 			if(streamData.stream === null) {
 				var randomArr = streamData._links.self.split('/');
 				var channelname = randomArr[randomArr.length-1];
