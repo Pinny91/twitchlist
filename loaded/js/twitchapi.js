@@ -29,7 +29,14 @@ $.getJSON(dataURL, function(followersListData) {
 	for(i=0; i<followersListData.follows.length; i++) {
 		channelName = followersListData.follows[i].channel.name;
 		channelURL = channelBasicURL + channelName + '?client-ID=' + id;		
-		$.getJSON(channelURL, function(streamData) {
+		
+		$.ajax({
+			type: 'GET',
+			url: 'https://api.twitch.tv/kraken/channels/itmejp',
+			headers: {
+				'Client-ID': 'g1kobimxlknrwgoouk8h1mz4ribnip'
+			},
+			success: function(streamData) {
 			teller++;
 			if(streamData.stream === null) {
 				var randomArr = streamData._links.self.split('/');
@@ -64,9 +71,8 @@ $.getJSON(dataURL, function(followersListData) {
 				var listId = '#num' + teller;
 				$(listId).addClass('online');
 			
-			}
-		});
-		
+			}			}
+		});		
 	}
   
 });
