@@ -38,7 +38,6 @@ $.getJSON(dataURL, function(followersListData) {
 			},
 			success: function(streamData) {
 			teller++;
-			console.log(streamData);
 			if(streamData.stream === null) {
 				var randomArr = streamData._links.self.split('/');
 				var channelname = randomArr[randomArr.length-1];
@@ -57,6 +56,7 @@ $.getJSON(dataURL, function(followersListData) {
 				$(listId).addClass('offline');
 			}
 			else {
+				console.log(streamData);
 				var logoURL = streamData.logo;
 				var channelname = streamData.name;
 				var game = streamData.game;
