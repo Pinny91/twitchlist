@@ -1,13 +1,154 @@
-#page {
-	max-width: 450px;
+ 
+
+body {
+		background-color: #1B1B1B;
 }
+#page {
+	max-width: 550px;
+}
+
+
+
+/*Logo opmaak*/
+.logo {
+	width: 40px;
+    height: 40px;
+}
+#list-streamers ul a .online .logo-block .logo {
+    border: 3px solid #73AD21;
+}
+#list-streamers ul a .offline .logo-block .logo {
+    border: 3px solid #8E9092;
+}
+/* HEADER OPMAAK */
+#head {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-top: solid #fff;
+	border-bottom: solid #fff;
+	height: 85px;
+}
+
+#head h2{
+	display: inline-block;
+	top: -20px;;
+	color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.225em;
+    line-height: 1.75em;
+	margin: 0 auto 0 auto;
+	text-align: center;
+    text-transform: uppercase;
+	padding: 0.35em 0.5em;
+    position: relative;
+	width: 80%;
+}
+
+#head #switch {
+	display: inline-block;
+	color: #fff;
+	width: 19%;
+	padding-top: 5px;
+	position: relative;
+	height: 70px;
+}
+
+#head #switch ul li {
+	cursor: pointer;
+}
+
+/*Knoppen opmaak */
+.sw {
+	width: 18px;
+	overflow: hidden;
+    float: right;
+    clear: right;
+	
+	transition: width 0.3s linear;
+	cursor: pointer;
+	margin: 3px 0;  
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	
+	font-size: 11px;
+	padding-left: 2px;
+	color: #1B1B1B;
+	
+}
+#swAll {
+	background-color: #5163DA;
+}
+#swOn {
+	background-color: #BDD8C2;
+}
+#swOff {
+	background-color: #C5C5C5;
+}
+
+.active {
+		transition: width 0.3s linear;
+		width: 65px !important;
+}
+
+.inactive {
+		background-color: #C5C5C5;
+}
+
+/* TABBEL OPMAAK */
+
+/*logo*/
+.logo-block {
+	display: inline-block;
+    position: relative;
+	width: 10%;
+	height: 40px;
+    float:left;
+}
+
+/*naam*/
+.name-block {
+	display: inline-block;
+    position: relative;
+	float:left;
+	margin-top: 7px;
+	width: 37%;
+	text-align: left;
+	left: 10px;
+}
+
+/*Game*/
+.game-block {
+	display: inline-block;
+    position: relative;
+	float: right;
+	margin-top: 7px;
+	width: 45%;
+	text-align: left;
+
+}
+
+/*Viewers*/
+.viewers-block {
+	display: inline-block;
+    position: relative;
+	float: right;
+	margin-top: 7px;
+	width: 7%;
+}
+
+
+/* Link opmaak */
+
 #list-streamers ul a li {
 	font-family: 'Josefin Slab', serif;
 	font-size: 1.2em;
 	display: block;
-	border-bottom: solid white;
+	border-color: #1B1B1B;
 	text-decoration: none;
 	height: 55px;
+}
+#list-streamers ul a li:hover {
+	border-color: #A0A0A0;
 }
 
 a {
@@ -20,66 +161,60 @@ a:hover {
 .online {
 	background-color: #BDD8C2;
 }
-
 .offline {
 	background-color: #C5C5C5;
 }
-
 
 .disable {
 	  display: none !important;
 }
 
-.active {
-		background-color: #BDD8C2;
-}
 
-.inactive {
-		background-color: #C5C5C5;
-}
-/*Logo opmaak*/
-.logo {
-	width: 40px;
-    height: 40px;
-}
-#list-streamers ul a .online .logo-block .logo {
-    border: 3px solid #73AD21;
-}
-#list-streamers ul a .offline .logo-block .logo {
-    border: 3px solid #8E9092;
-}
-
-
-/* TABBEL OPMAAK */
-
-/*logo*/
-.logo-block {
-	width: 60px;
-	height: 40px;
-    float:left;
-	top:10px;
-}
-
-/*naam*/
-.name-block {
-	float:left;
-	margin-top: 7px;
-}
-
-/*Game*/
-.game-block {
-	float: right;
-	margin-top: 7px;
-
+@media screen and (max-width: 450px) {
+	#list-streamers ul a li {
+		height: 75px;
+	}
+	.name-block {
+		float: left;
+		width: 75%;
+		left: 7%;
+		
+	}	
+	.game-block {
+		float: left;
+		width: 75%;
+		left: 7%;
+	}
+	#head h2{
+		font-size: 1.5em;
+	}
 }
 
 
-
-
-
-
-
-
+/*GSM*/
+@media only screen and (min-resolution: 117dpi) and (max-resolution: 119dpi), only screen and (min-resolution: 131dpi) and (max-resolution: 133dpi), only screen and (min-resolution: 145dpi) and (max-resolution: 154dpi), only screen and (min-resolution: 162dpi) and (max-resolution: 164dpi), only screen and (min-resolution: 169dpi) {
+  /* Your touch-specific css goes here */
+  
+}
+/*TEKST ADJUST CODE*/
+@media all and (min-width: 50px)   {  
+	body  { font-size:0.6em;  } 
+}
+@media all and (min-width: 100px)   {  
+	body  { font-size:0.8em;  } 
+}
+@media all and (min-width: 200px)   {  
+	body  { font-size:1.2em;  } 
+}
+@media all and (min-width: 350px)  {  
+	body  { font-size:1.2em;  }
+}
+@media all and (min-width: 450px)  {  
+	body  { font-size:1.2em;  }
+}
+@media all and (min-width: 700px)  {  
+	body  { font-size:1.2em;  } 
+}
 
 
 
