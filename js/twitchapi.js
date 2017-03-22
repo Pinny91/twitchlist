@@ -24,7 +24,7 @@ $.ajax({
 });
 
 $(document).ready(function() {
-	//window.location.replace(authenURL);
+	window.location.replace(authenURL);
 	onlyOn = $('#swOn');
 	onlyOff = $('#swOff');
 	allVis = $('#swAll');
